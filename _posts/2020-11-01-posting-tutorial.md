@@ -1,7 +1,7 @@
 ---
 author: Jacopo Schiavon
 title: "How to be a blog posters"
-date: "2020-12-28"
+date: "2020-11-01"
 subtitle: "Short tutorial on how to create blog posts for paperinick."
 tags: ["guide"]
 ShowToc: true

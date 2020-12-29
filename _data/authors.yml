@@ -15,6 +15,30 @@ Jacopo Schiavon:
       icon : "fab fa-fw fa-github"
       url : "https://com.github/jschiavon"
       
+Jacopo Diquigiovanni:
+  name: "Jacopo Diquigiovanni"
+  bio: "XXXIV PhD cycle"
+  location: "Padova, IT"
+  links:
+    - label : "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url: "mailto:jacopo.diquigiovanni@phd.unipd.it"
+    - label : "Website"
+      icon : "fas fa-fw fa-link"
+      url : "https://stat.unipd.it/ricerca/jacopo-diquigiovanni"
+
+Mattia Stival:
+  name: "Mattia Stival"
+  bio: "XXXIV PhD cycle"
+  location: "Padova, IT"
+  links:
+    - label: "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url: "mailto:mattia.stival@phd.unipd.it"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url : "https://stat.unipd.it/ricerca/mattia-stival"
+
 
 Sample Author:
   name : "Sample Author"
