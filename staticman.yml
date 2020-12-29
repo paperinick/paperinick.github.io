@@ -3,7 +3,6 @@ comments:
   allowedFields: 
     - name
     - email
-    - website
     - comment
     - reply_to
   branch: master
