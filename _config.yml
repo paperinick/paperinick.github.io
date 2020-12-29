@@ -24,7 +24,7 @@ description : >- # this means to ignore newlines until "baseurl:"
      An informal meeting of young statisticians from 
      the Department of Statistics at the University of Padova
 baseurl : "" # the subpath of your site, e.g. /blog
-url     : "https://paperinick.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url     : "https://paperinick.github.io" 
 repository: "paperinick/paperinick.github.io"
 
 # Build settings
@@ -45,6 +45,7 @@ comments:
   provider  : "staticman_v2"
   staticman:
     branch    : "main"
+    endpoint  : "https://staticman-paperinick.herokuapp.com/v2/connect/paperinick/paperinick.github.io"
 
 # Site Footer
 footer:
