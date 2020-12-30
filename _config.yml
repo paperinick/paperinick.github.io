@@ -24,7 +24,7 @@ description : >- # this means to ignore newlines until "baseurl:"
      An informal meeting of young statisticians from 
      the Department of Statistics at the University of Padova
 baseurl : "" # the subpath of your site, e.g. /blog
-url     : "https://paperinick.github.io" 
+url     : "https://paperinick.github.io"
 repository: "paperinick/paperinick.github.io"
 
 # Build settings
@@ -41,11 +41,12 @@ plugins:
 permalink: /:categories/:title/
 paginate: 8 # amount of posts to show
 paginate_path: /page:num/
+
 comments:
   provider  : "staticman_v2"
   staticman:
-    branch    : "main"
-    endpoint  : "https://staticman-paperinick.herokuapp.com/v2/connect/paperinick/paperinick.github.io"
+    branch : "main"
+    endpoint  : "https://staticman-paperinick.herokuapp.com/v2/entry/"
 
 # Site Footer
 footer:

@@ -5,7 +5,7 @@ comments:
     - email
     - message
   branch: main
-  commitMessage: "New comment in {options.slug}"
+  commitMessage: "Comment from {fields.name} on {options.slug}"
   filename: "comment-{@timestamp}"
   format: yaml
   generatedFields: 
