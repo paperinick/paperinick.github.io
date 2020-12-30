@@ -20,3 +20,8 @@ comments:
     - message
   transforms: 
     email: md5
+
+  reCaptcha:
+    enabled: true
+    siteKey: 6Ld9NRoaAAAAAKiZu6EJFXxC9yG4_k9v5s5jc3ly
+    secret: "GhUxXb8uJWKD3Q8JMPixtNOLcJuKFa8dNXDBr49CCqE7L3Rvp9vdyjXBsa7ZxIHrd4KcaSd4W+f3M6g2ozwkjy71DC8ZDbGPrgakUiBCLvXXXCAzukv1ecCaJaioT2kDOdysfLHubGy+HQfQp0s8WLJGCfAYVhTq0Yl2qWz3MC7VL09Xt3Cv2q90xKISfc9NXNmRsvHOaGt7HuLNLxm4Mkv7N2NPLqQKw32QQpNnAYZBg/AN78qDqaVaTPdBUtrDKHMU8Y1qN1HxfF7KEMH06Uj8GxfNL3iAQZGP0OcYv0lFlrMZk1hlbEaJi97PrAy6YGwlhMoblBHKPm4vGMuNFA=="
