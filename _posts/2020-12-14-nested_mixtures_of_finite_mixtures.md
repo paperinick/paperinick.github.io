@@ -2,7 +2,7 @@
 title: "Nested mixtures of finite mixtures"
 author: Laura D'Angelo
 date: "2020-12-14"
-tags: ["General discussion"]
+tags: ["Mixture Models"]
 toc: false
 ---
 
