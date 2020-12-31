@@ -31,6 +31,9 @@ A_t \sim \, ??
 $$
 ovvero dobbiamo definire una distribuzione a priori sulla media di variabili aleatorie normali in modo tale da soddisfare le esigenze appena descritte.
 
+![Serie storica di dati di calcium imaging. I colori dello sfondo indicano lo stimolo visivo mostrato in quell'istante.](/assets/images/fCAM/data.pdf){:width="400px"}
+![Ingrandimento della serie di calcium imaging, per evidenziare gli spikes e il decadimento auto-regressivo del calcio.](/assets/images/fCAM/ingrandimento.pdf){:width="400px"} 
+
 ### Modelli "nested"
 #### Nested Dirichlet process
 Un approccio Bayesiano nonparametrico per analizzare dati in condizioni di parziale scambiabilità è proposto da Rodríguez, Dunson e Gelfand (2008), ed è il cosiddetto *nested Dirichlet process*. 
