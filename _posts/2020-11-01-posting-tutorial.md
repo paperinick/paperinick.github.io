@@ -5,6 +5,7 @@ date: "2020-11-01"
 subtitle: "Short tutorial on how to create blog posts for paperinick."
 tags: ["Guide"]
 toc: true
+toc_sticky: true
 weight: 2
 ---
 

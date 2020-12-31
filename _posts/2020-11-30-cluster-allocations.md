@@ -4,7 +4,8 @@ subtitle: Mixture models e cluster allocations
 author: Mattia Stival
 date: "2020-11-30"
 tags: ["Mixture Models", "Cluster Allocations"]
-showtoc: true
+toc: true
+toc_sticky: true
 ---
 
 
@@ -42,11 +43,11 @@ Con $$N$$ grande, calcolare le distribuzioni full conditional può essere oneros
 
 L'esplorazione di tutte le mode non è garantita
 
-![L'esplorazione di tutte le mode non è garantita](/assets/images/cluster-allocations/label_switching.png)
+![L'esplorazione di tutte le mode non è garantita](/assets/images/cluster-allocations/label_switching.png){:width="400px"}
 
 In high-dimensional settings la catena si incastra e non cambia le allocazioni
  
-![In high-dimensional settings la catena si incastra e non cambia le allocazioni](/assets/images/cluster-allocations/allocations.png)
+![In high-dimensional settings la catena si incastra e non cambia le allocazioni](/assets/images/cluster-allocations/allocations.png){:width="400px"}
 
 
 ### Risolviamoli: meglio insieme!
@@ -102,7 +103,7 @@ L'algoritmo considera le allocazioni e il numero di gruppi congiuntamente, dopo 
 
 
 ### Fixed G: M1 & M3
-![Moves M1 & M3](/assets/images/cluster-allocations/moves1_3.png)
+![Moves M1 & M3](/assets/images/cluster-allocations/moves1_3.png){:width="400px"}
 
 1. Seleziona casualmente $$j_1$$ e $$j_2$$
 2. Rialloca gli elementi nei gruppi $$j_1$$ e $$j_2$$ in $$j_1$$ con probabilità $$p$$ e in $$j_2$$ con probabilità $$1-p$$
@@ -110,7 +111,7 @@ L'algoritmo considera le allocazioni e il numero di gruppi congiuntamente, dopo 
 Nelle due moves cambia come si sceglie $$p$$ (M1: $$p \sim \beta(a, a)$$, M3: basata sulla likelihood)
 
 ### Fixed G: M2 & M4
-![Moves M2 & M4](/assets/images/cluster-allocations/moves3.png)
+![Moves M2 & M4](/assets/images/cluster-allocations/moves3.png){:width="400px"}
 
 1. Seleziona casualmente $$j_1$$ e $$j_2$$
 2. Seleziona casualmente $$m \in \{1,\ldots, n_{j1}\}$$
@@ -119,7 +120,7 @@ Nelle due moves cambia come si sceglie $$p$$ (M1: $$p \sim \beta(a, a)$$, M3: ba
 Tra le moves che non cambiano il numero di gruppi viene considerata anche quella dove vengono casualmente cambiate le label dei gruppi
 
 ### Varying G (caso $$G^\star = G^{(it-1)}+1$$)
-![Varying G](/assets/images/cluster-allocations/moves_var.png){width=400 height=225}
+![Varying G](/assets/images/cluster-allocations/moves_var.png){:width="400px"}
 
 1. Seleziona casualmente $$j_1 \in \{1, \ldots,  G^{(it-1)}\}$$
 2. Alloca gli elementi di $$j_1$$ in $$j_2 = G^\star$$ con probabilità $$p_e \sim \beta(a, a)$$
