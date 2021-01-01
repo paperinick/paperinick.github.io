@@ -125,6 +125,20 @@ tag_archive:
   type  : liquid
   path  : /tags/
 
+
+# JavaScript
+head_scripts:
+  - /assets/js/scroll-to-top.js
+  - /assets/js/read-progress.js
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+
+
 # HTML Compression
 compress_html:
   clippings: all
