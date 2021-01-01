@@ -132,7 +132,7 @@ $ git push origin main
 ```
 This will ensure that the online version of your fork will be updated with your last work (and also with the work done in the common repository).
 
-Finally, open the github page of the common repository (the one available [here](https://github.com/mascaretti/paperitivo)) and navigate to the [Pull Request](https://github.com/mascaretti/paperitivo/pulls) tab. There, you can push the "New pull request" button.
+Finally, open the github page of the common repository (the one available [here](https://github.com/paperinick/paperinick.github.io)) and navigate to the [Pull Request](https://github.com/paperinick/paperinick.github.io/pulls) tab. There, you can push the "New pull request" button.
 
 ![Creating a new pull request: the compare page](/assets/images/posting-guide/compare-page.png)
 
