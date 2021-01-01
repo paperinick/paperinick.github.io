@@ -14,6 +14,8 @@ _Short tutorial on how to create blog posts for paperinik._
 
 The website is hosted in a [Github repository](https://github.com/paperinick/paperinick.github.io). To allow contribution from everyone, we will use the standard git collaborative framework based on forks and pull requests.
 
+The last section is for the lazy people out there, but you should read all the rest of the post anyway!
+
 ## Setting up the fork and the local repository
 
 The first step, thus, is to fork the repository: from the repository page, in the top right corner of the page, press the Fork button to create a fork on your account and then clone the forked repository on your local machine. You can easily do this by opening a terminal or a Git Bash[^1] window in the location where you want the repository to be located and issuing 
@@ -106,7 +108,7 @@ The same goes for the table of contents, which you can disable with `toc: false`
 
 Of course, you should add also your name as the author, using the `Name Surname` identifier that you defined in the `_data/author.yml` file.
 
-Finally, you can add one or more *tags* to your post, in order to allow for tags grouping in the site. To do this, in the frontmatter add the row `tags: ["tag1", "tag2"]`. If you are going to use a tag that has been already used (for instance the tag ["Cluster Allocations"](https://paperinick.github.io/tags/#cluster-allocations)), please go check on the [website](https://paperinick.github.io/tags) for the correct name (misspellings or typos make the whole tag system pointless).
+Finally, you can add one or more *tags* to your post, in order to allow for tags grouping in the site. To do this, in the frontmatter add the row `tags: ["tag1", "tag2"]`. If you are going to use a tag that has been already used (for instance the tag ["Cluster Allocations"](https://paperinick.github.io/tag-archive/#cluster-allocations)), please go check on the [tags archive](https://paperinick.github.io/tag-archive) for the correct name (misspellings or typos make the whole tag system pointless).
 
 
 ## Syncing the fork with upstream
@@ -142,3 +144,13 @@ Review the changes to avoid any error and finally press "Create pull request" an
 
 Almost all this topics are described in wide detail in the GitHub Docs, for instance [How to configure a remote for a fork](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork), [How to sync a fork](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/syncing-a-fork) and [How to create a pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
 
+
+
+## If you are very lazy
+If you are very lazy, instead of setting up a local repository you can just create the new file (and edit the `author.yml` file) directly in github, and then committing the changes and creating the pull request.
+
+This approach is certainly faster and easier, but it works only the first time: when you will want to add a new post, you will need to sync the fork and that does not work only online. The only hacky way to do it would be to delete your forked repository, fork it again from the original paperinick account and make the new changes.
+
+**OR** you could just learn the basis of git and do it the correct way! It is not that hard, trust me: when you are writing Gibbs sampler all day long issuing a couple shell commands should be a piece of cake. 
+
+And moreover, it is a useful skill to have!
