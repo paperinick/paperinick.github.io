@@ -1,0 +1,48 @@
+---
+title: "Which is a good summary of a multimodal posterior?"
+author: Lorenzo Schiavon
+date: "2021-01-11"
+tags: ["Mixture Models", "Cluster Allocations", "Bayesian statistics", "MCMC", "Factor models", "Identifiability"]
+toc: true
+toc_sticky: true
+---
+
+
+## Multimodal posterior distributions
+
+In this discussion we deal with two cases that generates multimodal distributions
+- Large discrete parameter spaces: not ordered. (Ex: partition spaces in clustering).
+
+- Non-identifiability/symmetry in the parameter space: label switching, sign switching ... (Ex: mixture parameters, loadings matrix in factor analysis...)
+
+Problem in well done MCMC: we obtain $S$ samples that are drawn from the more than one modes of the posterior distribution.
+
+\begin{frame}{Why usual summaries does not work}
+\begin{itemize}
+	\item 	MCMC mean: usually it is not meaningful!
+	\item 	MCMC mode: not feasible (large or infinite parameter space)
+	\item 	MCMC median: ordering?
+\end{itemize}
+
+**Why usual summaries does not work?**
+- MCMC mean: not meaningful! Let's think to the mean between two modes... 
+
+-	MCMC mode: not feasible! The parameter space is infinite (or very very large) so that the points are visited only once by the chain.
+
+- MCMC median: ordering?
+
+Let's look in details the most common cases where summaries of multimodal posterior are desired.
+
+## Bayesian clustering
+  #### Notation: $S$ samples, $k$ possible groups, observation $n$ belongs to group $g_n$.	
+  
+	Let's start with the  simpler case!
+  
+	Why is simpler?
+  - We can reduce the parameter space to the partition space: absence of symmetry (usually...).
+  
+	- Extensive literature: Dahl (2006), Wade and Ghahramani (2018) ... Stival (202*) ;) 
+
+
+## Bibliografia
+
