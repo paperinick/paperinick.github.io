@@ -41,14 +41,15 @@ $$
 ![Serie storica di dati di calcium imaging. I colori dello sfondo indicano lo stimolo visivo mostrato in quell'istante.](/assets/images/fCAM/data.png){:width="400px"}
 
 
-
 ### Modelli "nested"
 #### Nested Dirichlet process
 Un approccio Bayesiano nonparametrico per analizzare dati in condizioni di parziale scambiabilità è proposto da Rodríguez, Dunson e Gelfand (2008), ed è il cosiddetto *nested Dirichlet process*. 
 Questo processo assume che all'interno di ogni gruppo $$g_j$$ i parametri siano generati da una comune distribuzione $$G_j$$, ovvero
+
 $$
 (A_t \,\text{ per }\, t \,\text{ tale che }\, g_t=j)\, \sim G_j.
 $$
+
 Queste distribuzioni $$G_1,\dots,G_J$$ sono generate da una distribuzione $$Q$$ che è definita come $$Q\equiv DP(\alpha, DP(\beta,G_0))$$. Scriverlo in forma di mistura infinita è un po' più chiaro:
 
 $$
