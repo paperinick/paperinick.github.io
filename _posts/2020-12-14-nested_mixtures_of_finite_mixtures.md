@@ -1,13 +1,14 @@
 ---
 title: "Nested mixtures of finite mixtures"
-author: Laura D'Angelo
+author: Laura DAngelo
 date: "2020-12-14"
 tags: ["Mixture Models"]
 toc: true
+toc_sticky: true
 ---
 
-### Breve introduzione al problema
-#### Dati e obiettivo dell'analisi
+## Breve introduzione al problema
+### Dati e obiettivo dell'analisi
 
 L'ambito di riferimento è quello del cosiddetto *calcium imaging*, una tecnica che permette di osservare l'attività dei neuroni nel tempo tramite l'analisi della concentrazione degli ioni di calcio presente all'interno della cellula. 
 In particolare, in questo esperimento sono osservati i neuroni della corteccia visiva di un topo mentre osserva uno schermo su cui sono presentati stimoli visivi di diverso tipo. L'obiettivo è capire come l'attività dei neuroni vari a seconda dello stimolo visivo a cui il topo è sottoposto.
@@ -41,8 +42,8 @@ $$
 ![Serie storica di dati di calcium imaging. I colori dello sfondo indicano lo stimolo visivo mostrato in quell'istante.](/assets/images/fCAM/data.png){:width="400px"}
 
 
-### Modelli "nested"
-#### Nested Dirichlet process
+## Modelli "nested"
+### Nested Dirichlet process
 Un approccio Bayesiano nonparametrico per analizzare dati in condizioni di parziale scambiabilità è proposto da Rodríguez, Dunson e Gelfand (2008), ed è il cosiddetto *nested Dirichlet process*. 
 Questo processo assume che all'interno di ogni gruppo $$g_j$$ i parametri siano generati da una comune distribuzione $$G_j$$, ovvero
 
@@ -63,7 +64,7 @@ Grazie ai due livelli di DP, il processo induce un clustering sia a livello dell
 
 Tuttavia, questa definizione del processo presenta un grosso svantaggio quando applicata in situazioni in cui le distribuzioni tra gruppi non sono troppo diverse: è sufficiente che due distribuzioni $$G^*_k$$ e $$G^*_m$$ abbiano in comune anche un solo atomo per far sì che vengano fatte collassare insieme e i due gruppi vengano assegnati ad un unico cluster distributivo.
 
-#### Common Atom Model
+### Common Atom Model
 Per risolvere questo problema Denti et al. (2020) hanno proposto il cosiddetto *common atom model* (CAM), che permette di avere distribuzioni distinte anche se parzialmente sovrapposte. La formulazione è molto simile alla precedente, ma la differenza è che gli atomi sono comuni a tutte le distribuzioni, e ciò che permette di ottenere distribuzioni distinte sono solo i pesi $$\omega_{lk}$$. Il CAM può essere scritto come
 
 $$
@@ -73,7 +74,7 @@ G_k^* = \sum_{l=1}^{\infty} \omega_{lk} \delta_{A^*_{l}} \qquad  \{\omega_{lk}\}
 A^*_{l} \sim G_0.
 $$
 
-#### Nested mixtures of finite mixtures
+### Nested mixtures of finite mixtures
 Un noto problema del Dirichlet process è che in alcune circostanze il clustering che produce può non essere soddisfacente e può non riflettere davvero la struttura dei gruppi presenti nei dati. Questo è comune soprattutto quando i gruppi presenti nei dati presentano tutti una numerosità piuttosto equilibrata, e il DP tenderà invece a produrre pochi clusters numerosi e ad inserire piccoli cluster transitori e singoletti. E di conseguenza anche la stima del numero di clusters ne risulterà affetta negativamente.
 
 Per questo motivo di recente è rinato l'interesse verso le misture finite, ma più flessibili rispetto alle misture "standard" in cui il numero di gruppi deve essere fissato in anticipo (e che non richiedano sacrifici alle divinità del RJMCMC per ottenere la posteriori).
@@ -95,7 +96,7 @@ $$
 
 e per stimarlo abbiamo riadattato lo slice sampler di Denti et al. (2020) al caso di misture finite, con l'aggiunta degli step descritti da Frühwirth-Schnatter, Malsiner-Walli e Grün (2020) nel loro *telescoping sampler* per permettere alle dimensioni delle due misture di variare.
 
-### Bibliografia
+## Bibliografia
 
 - [F. Denti, F. Camerlenghi, M. Guindani and A. Mira (2020)](https://arxiv.org/abs/2008.07077) A Common Atom Model for the Bayesian Nonparametric Analysis of Nested Data. *arXiv preprint arXiv:2008.07077*
 
