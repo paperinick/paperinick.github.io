@@ -39,6 +39,18 @@ Mattia Stival:
       icon: "fas fa-fw fa-link"
       url : "https://stat.unipd.it/ricerca/mattia-stival"
 
+Lorenzo Schiavon:
+  name: "Lorenzo Schiavon"
+  bio: "XXXIV PhD cycle"
+  location: "Padova, IT"
+  links:
+    - label: "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url: "mailto:lorenzo.schiavon@phd.unipd.it"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url : "https://lorenzo-schiavon.github.io/"
+
 
 Sample Author:
   name : "Sample Author"

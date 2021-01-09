@@ -43,11 +43,11 @@ Con $$N$$ grande, calcolare le distribuzioni full conditional può essere oneros
 
 L'esplorazione di tutte le mode non è garantita
 
-![L'esplorazione di tutte le mode non è garantita](/assets/images/cluster-allocations/label_switching.png){:width="400px"}
+![L'esplorazione di tutte le mode non è garantita](/assets/images/cluster-allocations/label_switching.png){:width="450px"}
 
 In high-dimensional settings la catena si incastra e non cambia le allocazioni
  
-![In high-dimensional settings la catena si incastra e non cambia le allocazioni](/assets/images/cluster-allocations/allocations.png){:width="400px"}
+![In high-dimensional settings la catena si incastra e non cambia le allocazioni](/assets/images/cluster-allocations/allocations.png){:width="450px"}
 
 
 ### Risolviamoli: meglio insieme!
@@ -103,7 +103,7 @@ L'algoritmo considera le allocazioni e il numero di gruppi congiuntamente, dopo 
 
 
 ### Fixed G: M1 & M3
-![Moves M1 & M3](/assets/images/cluster-allocations/moves1_3.png){:width="400px"}
+![Moves M1 & M3](/assets/images/cluster-allocations/moves1_3.png){:width="450px"}
 
 1. Seleziona casualmente $$j_1$$ e $$j_2$$
 2. Rialloca gli elementi nei gruppi $$j_1$$ e $$j_2$$ in $$j_1$$ con probabilità $$p$$ e in $$j_2$$ con probabilità $$1-p$$
@@ -111,7 +111,7 @@ L'algoritmo considera le allocazioni e il numero di gruppi congiuntamente, dopo 
 Nelle due moves cambia come si sceglie $$p$$ (M1: $$p \sim \beta(a, a)$$, M3: basata sulla likelihood)
 
 ### Fixed G: M2 & M4
-![Moves M2 & M4](/assets/images/cluster-allocations/moves3.png){:width="400px"}
+![Moves M2 & M4](/assets/images/cluster-allocations/moves3.png){:width="450px"}
 
 1. Seleziona casualmente $$j_1$$ e $$j_2$$
 2. Seleziona casualmente $$m \in \{1,\ldots, n_{j1}\}$$
@@ -120,7 +120,7 @@ Nelle due moves cambia come si sceglie $$p$$ (M1: $$p \sim \beta(a, a)$$, M3: ba
 Tra le moves che non cambiano il numero di gruppi viene considerata anche quella dove vengono casualmente cambiate le label dei gruppi
 
 ### Varying G (caso $$G^\star = G^{(it-1)}+1$$)
-![Varying G](/assets/images/cluster-allocations/moves_var.png){:width="400px"}
+![Varying G](/assets/images/cluster-allocations/moves_var.png){:width="450px"}
 
 1. Seleziona casualmente $$j_1 \in \{1, \ldots,  G^{(it-1)}\}$$
 2. Alloca gli elementi di $$j_1$$ in $$j_2 = G^\star$$ con probabilità $$p_e \sim \beta(a, a)$$
@@ -128,7 +128,7 @@ Tra le moves che non cambiano il numero di gruppi viene considerata anche quella
 $a$ è un parametro critico per il buon funzionamento dell'algoritmo
 
 ### Una nuova move (fixed G)
-![Proposed move](/assets/images/cluster-allocations/proposal.png){width=400 height=225}
+![Proposed move](/assets/images/cluster-allocations/proposal.png){:width="450px"}
 
 Dato $$\mathbf{S}^{(it-1)}$$, ogni riga di $$\mathbf{S}^\star$$ viene generata indipendentemente dalle altre in accordo con
 
