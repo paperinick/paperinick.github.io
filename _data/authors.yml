@@ -51,10 +51,28 @@ Lorenzo Schiavon:
       icon: "fas fa-fw fa-link"
       url : "https://lorenzo-schiavon.github.io/"
 
+Laura D'Angelo:
+  name : "Laura D'Angelo"
+  bio : "PhD student in Statistics @UniPd"
+  location : "Padova, IT"
+  links:
+    - label : "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url : "mailto:laura.dangelo.1@phd.unipd.it"
+    - label : "Website"
+      icon : "fas fa-fw fa-link"
+      url : "https://laura-dangelo.github.io/"
+    - label : "Github"
+      icon : "fab fa-fw fa-github"
+      url : "https://github.com/laura-dangelo"
+    - label : "Twitter"
+      icon : "fab-fa-fw fa-twitter-square"
+      url : "https://twitter.com/laura_d_angelo"
+
 
 Sample Author:
   name : "Sample Author"
-  bio : "Short Bio"
+  bio : "Short bio"
   location : "Where, IT?"
   links:
     - label : "Email"
