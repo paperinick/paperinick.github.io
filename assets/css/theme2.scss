@@ -4,7 +4,7 @@
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin2 | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 /* Scroll to top CSS */
@@ -21,17 +21,17 @@
         right: 5%;
         bottom: 15px;
     }
-    
+
     opacity: 0;
     z-index: 99;
     text-align: center;
-    
+
     :last-child {
-      transition: transform 0.7s ease-in-out;
-      
-      &:active, &:hover {
-         transform: translateY(-10%);
-      }
+        transition: transform 0.7s ease-in-out;
+        
+        &:active, &:hover {
+            transform: translateY(-10%);
+        }
     }
     transform: translateY(30%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;

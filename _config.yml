@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title   : "Paperinick"
-locle   : "it-IT"
+locale   : "it-IT"
 description : >- # this means to ignore newlines until "baseurl:"
      An informal meeting of young statisticians from 
      the Department of Statistics at the University of Padova
@@ -30,7 +30,8 @@ logo : "/assets/images/icons/apple-touch-icon.png"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
-minimal_mistakes_skin   : "dark"
+minimal_mistakes_skin   : "mint"
+minimal_mistakes_skin2   : "dark"
 plugins:
   - jekyll-paginate
   - jekyll-feed
