@@ -26,6 +26,7 @@ description : >- # this means to ignore newlines until "baseurl:"
 baseurl : "" # the subpath of your site, e.g. /blog
 url     : "https://paperinick.github.io"
 repository: "paperinick/paperinick.github.io"
+logo : "/assets/images/icons/apple-touch-icon.png"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
