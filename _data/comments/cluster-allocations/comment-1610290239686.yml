@@ -1,0 +1,7 @@
+_id: 34923480-5353-11eb-99fd-cf4d9b31af7f
+message: "Una nota sul post, così imparo a commentare ;)\r\n\r\nLe prime due immagini sono state (brutalmente) prese dal libro \"Handbook of Mixture Analysis\" e dal paper\r\na cura di Fruhwirth-Schnatter, Celeux e Robert e dal paper sul label switching  di Stephens (2000). Le altre invece sono state create nel sito draw.io. \r\n\r\nVorrei aggiungere alla lista di paper con prospettive interessanti (quantomeno alternative) il lavoro \"Distance Dependent Chinese Restaurant Processes\" di Blei e Frazier, 2011 (JMLR). \r\nPiuttosto che lavorare con le allocazioni di un cliente del ristorante ad un dato tavolo, cambiano la prospettiva e creano un link tra i vari clienti. I clienti che sono tra loro \"connessi\", poi appartengono allo stesso tavolo. Nel paper paragonano il loro algoritmo con un algoritmo standard per i DP, a parità di modello, mostrandone le buone performance in termini di mixing.\r\n\r\nVorrei porre l'attenzione su $\\mathbf{S}$ matrice di selezione $N \\time G$. Secondo voi che ruolo possono avere le matrici $S^\\intercal S$ e $SS^\\intercal$?"
+name: Mattia
+email: e832096e0a2be95140a2143f8b11ef54
+url: ''
+hidden: ''
+date: '2021-01-10T14:50:39.680Z'
