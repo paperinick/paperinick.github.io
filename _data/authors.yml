@@ -69,6 +69,27 @@ Laura DAngelo:
       icon : "fab fa-fw fa-twitter-square"
       url : "https://twitter.com/laura_d_angelo"
 
+Emanuele Degani:
+  name: "Emanuele Degani"
+  bio: "PhD student in Statistics @UniPd"
+  location: "Padova, IT"
+  links:
+    - label : "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url : "mailto:degani@stat.unipd.it"
+    - label : "Website"
+      icon : "fas fa-fw fa-link"
+      url : "https://achab94.github.io/"
+    - label : "Website"
+      icon : "fas fa-fw fa-link"
+      url : "https://achab94.shinyapps.io/covid-19/"
+    - label : "Github"
+      icon : "fab fa-fw fa-github"
+      url : "https://github.com/Achab94"
+    - label : "Twitter"
+      icon : "fab fa-fw fa-twitter-square"
+      url : "https://twitter.com/Achab94"
+
 
 Sample Author:
   name : "Sample Author"
