@@ -1,0 +1,17 @@
+_id: fd106bf0-7dd5-11eb-b508-2df0f4fdf313
+message: >-
+  Aggiungo un'ulteriore nuova (<a href="https://arxiv.org/pdf/2102.04509.pdf">
+  reference</a>) per il sampling da distribuzioni discrete. Come altre proposte,
+  anche qui si cerca di lavorare localmente, e di cambiare una riga di
+  $\mathbf{S}$ in guardando effettivamente alla forma della distribuzione. Il
+  trick, paradossalmente semplice, è quello di calcolare il gradiente della
+  funzione target fregandosene dello spazio discreto della distribuzione e
+  trattandolo come continuo.  L'algoritmo è descritto in maniera compatta in 
+  sezione 4. Dicono funzioni, se comparato al benchmark dell'Hamming Ball
+  sampler. Ne discutono alcune proprietà teoriche e si avvalgono del paper di
+  Zanella (2020) già citato.
+name: mattia
+email: e832096e0a2be95140a2143f8b11ef54
+url: ''
+hidden: ''
+date: '2021-03-05T17:12:39.490Z'
