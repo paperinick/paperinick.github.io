@@ -45,13 +45,14 @@ $$
 
 e in particolare:
 
-$$\mathcal{L}(q|\mathbf{x},\ell_n,\mathcal{D})=\mathbb{E}_{q(\mathbf{\vartheta})}\left[\ell_n(\mathbf{\vartheta},\mathbf{x})\right] + \mathcal{D}(q||\pi)$$,
+$$\mathcal{L}(q|\mathbf{x},\ell_n,\mathcal{D})=\mathbb{E}_{q(\mathbf{\vartheta})}\left[\ell_n(\mathbf{\vartheta},\mathbf{x})\right] + \mathcal{D}(q\vert\vert\pi)$$,
 
 similmente all'approccio di \textcolor{blue}{Bissiri et al, 2016}.
 
 Il nome **regola del 3** deriva dal fatto che per questo paradigma è necessario specificare solo 3 quantità fondamentali:
+
   1. **Loss** $\ell_n$: collega i parametri alle osservazioni.
-	2. **Uncertainty quantifier** $\mathcal{D}$: solitamente una divergenza. Ha la funzione di determinare l'incertezza nella posteriori.
+  2. **Uncertainty quantifier** $\mathcal{D}$: solitamente una divergenza. Ha la funzione di determinare l'incertezza nella posteriori.
 	3. **Admissible posteriors** $\Pi \subseteq \mathcal{P}(\Theta)$: un insime di possibili distribuzioni valide tra cui cercare la posteriori.
 
 Un caso particolare si ha quando $\Pi$ è una famiglia di distribuzioni variazionali $\mathcal{Q}$ e l'inferenza che si ottiene è detta Variational Bayes.
@@ -71,7 +72,7 @@ Un risultato teorico interessante dice che la VI standard garantisce la posterio
 
 Questo però non è sempre vero nella pratica! Allora gli autori propongono il framework più generale possibile, chiamato **Generalized Variational Inference**.
 
-## Generalized Variational Inference
+## Generalized Variational Inference (GVI)
 GVI porta a delle posteriori che hanno delle proprietà molto interessanti rispetto alle assunzioni di base dell'inferenza Bayesiana. In particolare:
 
   1. \textbf{P}: è robusta rispetto misspecificazioni della prior
@@ -91,11 +92,15 @@ La scelta della divergenza invece influisce sulla robustezza a prior mal specifi
 ## Algoritmo Black-Box
 In quest' ultimo paragrafo sintetizzo in 3 punti cruciali l'algoritmo di tipo Black-Box (si veda anche \textcolor{blue}{Ranganath et al, 2014}) che gli autori propongono per la stima:
 
-  1. Campiona $\mathbf{\vartheta}^{(1:S)}$ da $q(\mathbf{\vartheta}|\mathbf{\kappa}_t)$ e calcola le loss function in ogni punto $\ell_s = \sum_{i=1}^n\ell(\mathbf{\vartheta}^{(s)},x_i)\,\nabla_{\mathbf{\kappa}_t}\log q(\mathbf{\vartheta}^{(s)}|\mathbf{\kappa}_t)$;
-  2. Calcola l'uncertainty quantifier $\ell_s = \ell_s+\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q||\pi)$;
+  1. Campiona $\mathbf{\vartheta}^{(1:S)}$ da $q(\mathbf{\vartheta}|\mathbf{\kappa}_{t})$ e calcola le loss function in ogni punto:
+  
+  $$\ell_s = \sum_{i=1}^n\ell(\mathbf{\vartheta}^{(s)},x_{i})\nabla_{\mathbf{\kappa}_{t}}\log q(\mathbf{\vartheta}^{(s)}|\mathbf{\kappa}_t)$$
+  
+  2. Calcola l'uncertainty quantifier $\ell_s = \ell_s+\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q\vert\vert\pi)$
+  
   3. Aggiorna i parametri variazionali $\mathbf{\kappa}_{t+1}=\mathbf{\kappa}_{t}+\rho_t\bar{\ell}$ e il criterio di convergenza. Qui $\rho_t$ è un learning rate e $\bar{\ell}$ è la media aritmetica delle $\ell_s$.
 
-Il gradiente $\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q||\pi)$ è una quantità cruciale in questo algoritmo: può essere calcolato analiticamente per alcune scelte di $\mathcal{D}$, altrimenti si ricorre ad approssimazioni distorte o non-distorte.
+Il gradiente $\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q\vert\vert\pi)$ è una quantità cruciale in questo algoritmo: può essere calcolato analiticamente per alcune scelte di $\mathcal{D}$, altrimenti si ricorre ad approssimazioni distorte o non-distorte.
 
 ## Riferimenti ad altri articoli
 
