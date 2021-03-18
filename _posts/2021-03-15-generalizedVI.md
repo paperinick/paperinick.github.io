@@ -63,10 +63,5 @@ Con la dicitura "standard" ci riferiamo al caso in cui la loss function sia la n
   
 Grazie alla scrittura del problema Bayesiano mediante la **regola del 3**, gli autori suggeriscono di interpretare VI come un **problema di ottimizzazione vincolato**.
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[scale=0.5]{../assets/images/generalizedVI/Opt.png}
-		\caption{VI as a $\mathcal{Q}$-constrained optimization.}
-	\end{center}
-\end{figure}
+![VI as a $\mathcal{Q}$-constrained optimization](../assets/images/generalizedVI/Opt.png){:width="450px"}
 
