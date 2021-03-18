@@ -90,6 +90,21 @@ Emanuele Degani:
       icon : "fab fa-fw fa-twitter-square"
       url : "https://twitter.com/Achab94"
 
+Nicolas Bianco:
+  name    : "Nicolas Bianco"
+  bio : "MsC in Statistics, XXXV PhD cycle in Statistics"
+  location : "Padova, IT"
+  links:
+    - label : "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url : "mailto:nicolas.bianco@phd.unipd.it"
+    - label : "Website"
+      icon : "fas fa-fw fa-link"
+      url : "https://WhiteNoise08.github.io"
+    - label : "Github"
+      icon : "fab fa-fw fa-github"
+      url : "https://github.com/WhiteNoise08"
+
 
 Sample Author:
   name : "Sample Author"
