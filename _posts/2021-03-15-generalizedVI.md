@@ -40,7 +40,7 @@ Ma nella pratica...
 Un primo contributo degli autori consiste nel giustificare la scrittura di un qualsiasi problema Bayesian in un modo molto generale $$P(\ell_n,\mathcal{D},\Pi)$$:
 
 $$
-q_B^*(\mathbf{\vartheta}) = \arg\min_{q\in\Pi}\,\mathcal{L}(q|\mathbf{x},\ell_n,\mathcal{D}),
+q_B^*(\mathbf{\vartheta}) = \arg\min_{q\in\Pi}\,\mathcal{L}(q\mid\mathbf{x},\ell_n,\mathcal{D}),
 $$
 
 e in particolare:
@@ -60,7 +60,7 @@ Un caso particolare si ha quando $$\Pi$$ è una famiglia di distribuzioni variaz
 
 
 ## "Standard" Variational Inference (VI)
-Con la dicitura "standard" ci riferiamo al caso in cui la loss function sia la negative log-likelihood e la divergenza scelta sia la Kullback-Leibler  $$P(-\log p(\mathbf{x}|\mathbf{\vartheta}),\mathsf{KL},\mathcal{Q})$$. Solitamente si forniscono due principali interpretazioni:
+Con la dicitura "standard" ci riferiamo al caso in cui la loss function sia la negative log-likelihood e la divergenza scelta sia la Kullback-Leibler  $$P(-\log p(\mathbf{x}\mid\mathbf{\vartheta}),\mathsf{KL},\mathcal{Q})$$. Solitamente si forniscono due principali interpretazioni:
 
   1. VI come massimizzazione dell'evidenza (ELBO)
   2. VI come minimizzazione della divergenza
@@ -94,9 +94,9 @@ La scelta della divergenza invece influisce sulla robustezza a prior mal specifi
 
 In quest' ultimo paragrafo sintetizzo in 3 punti cruciali l'algoritmo di tipo Black-Box (si veda anche Ranganath et al, 2014) che gli autori propongono per la stima:
 
-  1. Campiona $$\mathbf{\vartheta}^{(1:S)}$$ da $$q(\mathbf{\vartheta}|\mathbf{\kappa}_t)$$ e calcola le loss function in ogni punto $$\ell_s = \sum_{i=1}^n\ell(\mathbf{\vartheta}^{(s)},x_i)\,\nabla_{\mathbf{\kappa}_t}\log q(\mathbf{\vartheta}^{(s)}|\mathbf{\kappa}_t)$$;
-  2. Calcola l'uncertainty quantifier $$\ell_s = \ell_s+\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q||\pi)$$;
-  3. Aggiorna i parametri variazionali $$\mathbf{\kappa}_{t+1}=\mathbf{\kappa}_{t}+\rho_t\bar{\ell}$$ e il criterio di convergenza. Qui $$\rho_t$$ è un learning rate e $$\bar{\ell}$$ è la media aritmetica delle $$\ell_s$$.
+  1. Campiona $$\mathbf{\vartheta}^{(1:S)}$$ da $$q(\mathbf{\vartheta}\mid\mathbf{\kappa}_t)$$ e calcola le loss function in ogni punto $$\ell_s = \sum_{i=1}^n\ell(\mathbf{\vartheta}^{(s)},x_i)\,\nabla_{\mathbf{\kappa}_t}\log q(\mathbf{\vartheta}^{(s)}\mid\mathbf{\kappa}_t)$$;
+  2. Calcola l'uncertainty quantifier $$\ell_s = \ell_s+\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q\mid\pi)$$;
+  4. Aggiorna i parametri variazionali $$\mathbf{\kappa}_{t+1}=\mathbf{\kappa}_{t}+\rho_t\bar{\ell}$$ e il criterio di convergenza. Qui $$\rho_t$$ è un learning rate e $$\bar{\ell}$$ è la media aritmetica delle $$\ell_s$$.
 
 Il gradiente $$\nabla_{\mathbf{\kappa}_t}\mathcal{D}(q\mid\pi)$$ è una quantità cruciale in questo algoritmo: può essere calcolato analiticamente per alcune scelte di $$\mathcal{D}$$, altrimenti si ricorre ad approssimazioni distorte o non-distorte.
 
