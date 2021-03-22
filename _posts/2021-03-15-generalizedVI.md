@@ -91,6 +91,7 @@ La scelta della divergenza invece influisce sulla robustezza a prior mal specifi
 ![Better marginal variances](/assets/images/generalizedVI/V.PNG){:width="450px"}
 
 ## Algoritmo Black-Box
+
 In quest' ultimo paragrafo sintetizzo in 3 punti cruciali l'algoritmo di tipo Black-Box (si veda anche Ranganath et al, 2014) che gli autori propongono per la stima:
 
   1. Campiona $$\mathbf{\vartheta}^{(1:S)}$$ da $$q(\mathbf{\vartheta}|\mathbf{\kappa}_t)$$ e calcola le loss function in ogni punto $$\ell_s = \sum_{i=1}^n\ell(\mathbf{\vartheta}^{(s)},x_i)\,\nabla_{\mathbf{\kappa}_t}\log q(\mathbf{\vartheta}^{(s)}|\mathbf{\kappa}_t)$$;
