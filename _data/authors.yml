@@ -102,6 +102,15 @@ Nicolas Bianco:
       icon : "fab fa-fw fa-github"
       url : "https://github.com/WhiteNoise08"
 
+Cristian Castiglione:
+  name : "Cristian Castiglione"
+  bio : "PhD student in Statistics @ UniPD"
+  location: "Padova, IT"
+  links:
+    - label: "Email"
+      icon : "fas fa-fw fa-envelope-square"
+      url : "mailto:cristian.castiglione@phd.unipd.it"
+
 
 Sample Author:
   name : "Sample Author"
