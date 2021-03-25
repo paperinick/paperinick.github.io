@@ -1,16 +1,11 @@
-
 ---
-title: 'Bayesian Computing with Integrated Nested Laplace Approximation: An Overview'
-author: "Cristian Castiglione"
-date: '2021-02-01'
-tags:
-- Bayesian statistics
-- GMRF
-- INLA
-toc: yes
-toc_sticky: yes
+title: "Bayesian Computing with Integrated Nested Laplace Approximation: An Overview"
+author: Cristian Castiglione
+date: "2021-02-01"
+tags: ["Bayesian statistics", "GMRF", "INLA"]
+toc: true
+toc_sticky: true
 ---
-
 
 ## Introduzione
 
