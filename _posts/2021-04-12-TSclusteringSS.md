@@ -52,8 +52,6 @@ I dati mostrano dinamiche complesse dovute alla struttura dell'allenamento (nota
 ![ALLENAMENTO1](/assets/images/TSclusteringSS/ALLENAMENTO1.png){:width="450px"}
 
 
-### I dati come serie storiche
-
 Alle volte le attività presentano un comportamento più regolare, ma comunque possono essere affette dalla presenza di dati mancanti e osservazioni anomale.
 
 ![ALLENAMENTO2](/assets/images/TSclusteringSS/ALLENAMENTO2.png){:width="450px"}
@@ -118,15 +116,15 @@ per  $$t = 1, \ldots, T$$, $$p = 1,\ldots, P$$, qualche specificazione del trend
 Immaginiamo di osservare $$P = 2$$ variabili per $$N$$ attività.  Un semplice modello per $$G$$ gruppi può essere descritto dal seguente modello
 
 $$
-\texttt{Prima variabile} &\begin{cases}
-		y_{1,n,t} &=  \sum_{g=1}^G\mathbb{I}(S_n = g) \mu_{1,t}^{(g)} + \upsilon_{1,n,t}\\\nonumber
+\texttt{Prima variabile}\quad\begin{cases}
+		y_{1,n,t} &=  \sum_{g=1}^G\mathbb{I}(S_n = g) \mu_{1,t}^{(g)} + \upsilon_{1,n,t}\\
 		\mu_{1,t+1}^{(g)}  &= \mu_{1,t}^{(g)}+ \epsilon_{1,t}^{(g)},
 		\end{cases}
 $$
 
 $$
-\texttt{Seconda variabile}&\begin{cases}
-		y_{2,n,t} & = \sum_{g=1}^G \mathbb{I}(S_n = g)  \mu_{2,t}^{(g)} + \upsilon_{2,n,t}\\\nonumber
+\texttt{Seconda variabile}\quad\begin{cases}
+		y_{2,n,t} & = \sum_{g=1}^G \mathbb{I}(S_n = g)  \mu_{2,t}^{(g)} + \upsilon_{2,n,t}\\
 		\mu_{2,t+1}^{(g)} & = \mu_{2,t}^{(g)}+ \beta_{2,t}^{(g)}+ \epsilon_{2,t}^{(g)}\\
 		\beta_{2, t+1}^{(g)} & = \beta_{2, t}^{(g)} + \eta_{2,t}^{(g)},
 		\end{cases}
