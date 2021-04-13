@@ -70,7 +70,7 @@ Quindi cosa possiamo fare in questo mare di dati complessi?
 
 
 > "Disperarsi, naturalmente!" 
-> - cit. il tricheco in 136
+> cit. il tricheco in 136
 
 
 ### Perché state space
@@ -86,7 +86,7 @@ Riteniamo particolarmente rilevante il punto 3, perché in questo contesto è ut
 ### Perché il clustering
 
 > "Identifying activities that require similar effort allows to know how one athlete is performing. A different response to the same stimuli might be due to the enhancement or worsening of physical conditions, as well as to the impaired health of the athlete."
-> - cit. Un vecchio saggio
+> cit. Un vecchio saggio
 
 ![disegnino](/assets/images/TSclusteringSS/disegnino.png){:width="450px"}
 
@@ -99,24 +99,21 @@ Riteniamo particolarmente rilevante il punto 3, perché in questo contesto è ut
 - Assumiamo che le $$N$$ attività possono essere raggruppate in $$G$$ gruppi diversi.
 
 - Immaginiamo di sapere che la $$n$$-esima attività appartenga al gruppo $$g$$; allora la sua osservazione nel tempo segue un modello dinamico lineare tale che
-
 $$
-y_{p,n,t} &= \mu_{p,t}^{(g)} + \upsilon_{p, n, t}= \sum _{g=1}^G \mathbb{I}(S_n = g)  \mu_{p,t}^{(g)} + \upsilon_{p, n, t},
+y_{p,n,t} = \mu_{p,t}^{(g)} + \upsilon_{p, n, t} = \sum _{g=1}^G \mathbb{I}(S_n = g)  \mu_{p,t}^{(g)} + \upsilon_{p, n, t},
 $$
-
 per  $$t = 1, \ldots, T$$, $$p = 1,\ldots, P$$, qualche specificazione del trend $$\mu_{p,t}^{(g)}$$ ed errori incorrelati.
 
 - $$\boldsymbol{\mu}_t^{(g)} = \begin{bmatrix}\mu_{1,t}^{(g)}& \mu_{2,t}^{(g)}& \ldots& \mu_{P, t}^{(g)}\end{bmatrix}^\intercal$$ contiene i trend al tempo $$t$$ condivisi dalle attività appartenenti al gruppo $$g$$, per le $$P$$ variabili osservate.
 
 - L'appartenenza al gruppo $$g$$ per l'attività  $$n$$ non cambia nel tempo.
 
-- Attività appartenti allo stesso gruppo condividono le intere traiettorie descritte dai trend
-$$\mathbf{M}_{1:T}^{(g)}=\begin{bmatrix}\boldsymbol{\mu}_1^{(g)}& \boldsymbol{\mu}_2^{(g)}&\ldots& \boldsymbol{\mu}_T^{(g)}\end{bmatrix}$$.
+- Attività appartenti allo stesso gruppo condividono le intere traiettorie descritte dai trend $$\mathbf{M}_{1:T}^{(g)}=\begin{bmatrix}\boldsymbol{\mu}_1^{(g)}& \boldsymbol{\mu}_2^{(g)}&\ldots& \boldsymbol{\mu}_T^{(g)}\end{bmatrix}$$.
 
 - I trend della stessa variabile e diversi gruppi seguono le stesse relazioni strutturali, mentre variabili diverse possono seguire relazioni strutturali diverse.
 
 
-#### Un esempio
+### Un esempio
 
 Immaginiamo di osservare $$P = 2$$ variabili per $$N$$ attività.  Un semplice modello per $$G$$ gruppi può essere descritto dal seguente modello
 
@@ -125,8 +122,10 @@ $$
 		y_{1,n,t} &=  \sum_{g=1}^G\mathbb{I}(S_n = g) \mu_{1,t}^{(g)} + \upsilon_{1,n,t}\\\nonumber
 		\mu_{1,t+1}^{(g)}  &= \mu_{1,t}^{(g)}+ \epsilon_{1,t}^{(g)},
 		\end{cases}
-		\\
-		\texttt{Seconda variabile}&\begin{cases}
+$$
+
+$$
+\texttt{Seconda variabile}&\begin{cases}
 		y_{2,n,t} & = \sum_{g=1}^G \mathbb{I}(S_n = g)  \mu_{2,t}^{(g)} + \upsilon_{2,n,t}\\\nonumber
 		\mu_{2,t+1}^{(g)} & = \mu_{2,t}^{(g)}+ \beta_{2,t}^{(g)}+ \epsilon_{2,t}^{(g)}\\
 		\beta_{2, t+1}^{(g)} & = \beta_{2, t}^{(g)} + \eta_{2,t}^{(g)},
@@ -137,18 +136,14 @@ per una qualche specificazione di $$\mu_{1,1}^{(g)}$$, $$\mu_{2,1}^{(g)}$$,  $$\
 		
 ### Forme matriciale e vettorizzata del modello
 
-Dopo un po' di trick algebrici possiamo ottenere
-
--  Una forma matriciale del modello
+Dopo un po' di trick algebrici possiamo ottenere sia una forma matriciale del modello
 
 $$
 \mathbf{Y}_t  = \mathbf{Z} \mathbf{A}_t \mathbf{S}^\intercal + \mathbf{\Upsilon}_t, \quad \mathbf{\Upsilon}_t \sim \text{MN}_{P,N}(\mathbf{0}, \mathbf{\Sigma}^R \otimes \mathbf{\Sigma}^C ), \\
 \mathbf{A}_{t+1}  = \mathbf{T} \mathbf{A}_t + \mathbf{\Xi}_t, \quad \mathbf{\Xi}_t \sim \text{MN}_{Q,G}(\mathbf{0}, \mathbf{\Psi}^R \otimes\mathbf{\Psi}^C ),
 $$
 
-per qualche valore di partenza $$\mathbf{A}_1$$.
-
--  Una forma vettorizzata del modello
+per qualche valore di partenza $$\mathbf{A}_1$$, sia una forma vettorizzata
 
 $$
 \mathbf{y}_t = (\mathbf{S} \otimes \mathbf{Z}) \boldsymbol{\alpha}_t + \boldsymbol{\upsilon}_t, \quad \boldsymbol{\upsilon}_t \sim \text{MVN}_{PN}(\mathbf{0}, \mathbf{\Sigma}^C \otimes \mathbf{\Sigma}^R ), \\
@@ -157,9 +152,9 @@ $$
 
 con $$\mathbf{y}_t =\text{vec}(\mathbf{Y}_t)$$, $$\boldsymbol{\alpha}_{t} = \text{vec}(\mathbf{A}_t)$$, $$\boldsymbol{\upsilon}_{t} = \text{vec}(\mathbf{\Upsilon}_t)$$ e $$\boldsymbol{\xi}_{t} = \text{vec}(\mathbf{\Xi}_t)$$.
 
-Una generalizzazione del modello prevede di considerare per l'equazione di misura una somma di fattori latenti $$\sum_{r=1}^{R} \mathbf{Z}_r \mathbf{A}_{r,t} \mathbf{S}_r^\intercal$ anziché solo $\mathbf{Z} \mathbf{A}_{t} \mathbf{S}^\intercal$$, così da poter includere anche elementi che possono essere considerati di disturbo (errori correlati, effetti di regressione,...).
+Una generalizzazione del modello prevede di considerare per l'equazione di misura una somma di fattori latenti $$\sum_{r=1}^{R} \mathbf{Z}_r \mathbf{A}_{r,t} \mathbf{S}_r^\intercal$$ anziché solo $$\mathbf{Z} \mathbf{A}_{t} \mathbf{S}^\intercal$$, così da poter includere anche elementi che possono essere considerati di disturbo (errori correlati, effetti di regressione,...).
 
-#### Esempio
+### Esempio
 
 Sia  $$\mathbf{Y}_t= \begin{bmatrix}\mathbf{y}_{t}^{\cdot 1} & \ldots &\mathbf{y}_{t}^{\cdot N} \end{bmatrix}$$ con
 
@@ -177,14 +172,14 @@ $$
 x_{n,t} = \texttt{Altitude(m)}_{n,t}-\texttt{Altitude(m)}_{n,t-1}.
 $$
 
-- Consideriamo il modello
+Consideriamo il modello
 
 $$
 \mathbf{Y}_t = \mathbf{B} \mathbf{S}^\intercal \mathbf{X}_t + \mathbf{Z} \mathbf{A}_t \mathbf{S}^\intercal + \mathbf{\Upsilon}_t, \quad \mathbf{\Upsilon}_t \sim \text{MN}_{P, N}(\mathbf{0}, \mathbf{\Sigma}^R \otimes      \mathbf{\Sigma}^C),\\
 \mathbf{A}_{t+1} = \mathbf{T}\mathbf{A}_t + \mathbf{\Xi}_t, \quad \mathbf{\Xi}_t \sim \text{MN}_{Q,G}(\mathbf{0}, \mathbf{\Psi}^R \otimes \mathbf{\Psi}^C),
 $$
 
-con $$\mathbf{A}_{1} \sim \text{MN}_{Q,G}(\hat{\mathbf{A}}_{1 \mid 0}, \mathbf{P}_{1 \mid 0}^R \otimes \mathbf{P}_{1 \mid 0}^C)$, e $\mathbf{B} \sim \text{MN}_{P,G}(\hat{\mathbf{B}}_{0}, \mathbf{P}_{B}^R \otimes \mathbf{P}_{B}^C)$$.
+con $$\mathbf{A}_{1} \sim \text{MN}_{Q,G}(\hat{\mathbf{A}}_{1 \mid 0}, \mathbf{P}_{1 \mid 0}^R \otimes \mathbf{P}_{1 \mid 0}^C)$$ e $$\mathbf{B} \sim \text{MN}_{P,G}(\hat{\mathbf{B}}_{0}, \mathbf{P}_{B}^R \otimes \mathbf{P}_{B}^C).$$
 
 - Il modello identifica gruppi di attività che richiedono sforzi simili, dopo aver controllato per variazioni di altitudine, che possono avere un effetto sulla risposta.
 
